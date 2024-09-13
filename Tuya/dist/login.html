@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/flatpickr.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="./img/brand/favicon.png" type="img/png">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  </head>
+  <body>
+    <header class="loginHeader"> <img class="img-fluid" src="./img/vector/logo_tuya.svg" alt="Logo Tuya"></header>
+    <section class="loginSection bg-exito">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-7 col-11 align-self-center">
+            <div class="pe-md-4 mb-3 mb-md-0"><img class="img-fluid" id="changeColor" src="./img/brand/banner_exito.gif" alt="">
+              <div class="row justify-content-center">
+                <div class="progess-container">
+                  <div class="col-11 col-md-8">
+                    <p>Ingresa y te regalamos el <strong>10% de tu progreso en facturación </strong>para que cumplas tu meta más fácil.​</p>
+                  </div>
+                  <div class="col-11 col-md-4"><img class="img-fluid" src="./img/vector/10-porciento.svg" alt=""></div>
+                </div>
+              </div>
+              <p class="legal text-login">Desde TUYA te vamos a solicitar datos referentes a tu documento, fecha de nacimiento y últimos 4 dígitos de tu Tarjeta de Crédito para confirmar la validez de tu producto en la campaña. ¡OJO! Nunca te pediremos pines, códigos de seguridad, ni información completa de tu tarjeta, solo que valides algunos datos de forma segura.</p>
+            </div>
+          </div>
+          <div class="col-md-5 col-11 align-self-center">
+            <div class="bg-form">
+              <form>
+                <h5 class="text-dark2 mb-3">Cuando usas tu tarjeta, comienzas a disfrutar todo lo que quieres.</h5>
+                <p class="mb-4">Ingresa tus datos, conoce tu meta y gana.</p>
+                <div class="inputStyle">
+                  <input id="userId" name="user" type="password" required onkeypress="return (event.charCode &gt;= 1 &amp;&amp; event.charCode &lt;= 57)">
+                  <label for="userId">Últimos 5 dígitos de la cédula</label>
+                  <button class="togglePass" type="button"></button>
+                </div>
+                <p class="error">error error error</p>
+                <div class="inputStyle">
+                  <input class="validate" id="birthDate" name="user" type="text" required>
+                  <label for="birthDate">Fecha de nacimiento</label>
+                  <button class="calendar" type="button"></button>
+                </div>
+                <div class="row justify-content-center mt-4 mt-md-5">
+                  <div class="col-md-7"><img class="img-fluid w-100" src="./img/brand/captcha.png" alt=""></div>
+                  <div class="col-12 my-3"> 
+                    <label class="inputCheck mt-2">
+                      <input type="checkbox">
+                      <p class="m-0">Acepto <a class="text-link" href="#">términos y condiciones </a></p>
+                    </label>
+                  </div>
+                  <div class="col-md-5 col-8 my-3">
+                    <button class="btn btn-gray" type="submit">Continuar</button>
+                  </div>
+                  <div class="col-md-10 text-center mt-3"><small class="d-block">Vigencia de la campaña del 30 de octubre al 31 de diciembre de 2023.</small></div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer"> 
+      <div class="py-md-5">
+        <div class="container"> 
+          <div class="row justify-content-center"> 
+            <div class="col-md-4 col-11 mb-3 mb-md-0">
+              <div class="d-flex"><img class="img-fluid d-block d-md-none vig" src="./img/vector/vigilado.svg" alt=""><img class="img-fluid ms-md-3 ms-0" src="./img/vector/logo_footer.svg" alt=""></div>
+            </div>
+            <div class="col-md-8 col-11">
+              <div class="row"> 
+                <div class="col-md-4 py-4 py-md-0">
+                  <h5 class="mb-md-4">Legales</h5><a class="text-link d-block f-14" href="#">Términos y condiciones </a><a class="text-link d-block f-14 m-0" href="#">Preguntas frecuentes</a>
+                </div>
+                <div class="col-md-8 divider pt-4 pt-md-0">
+                  <h5 class="mb-md-4">Contacto</h5>
+                  <p><strong class="f-14">Si tienes dudas con tus transacciones comunícate a</strong></p>
+                  <div class="row"> 
+                    <div class="col-md-5">
+                      <ul class="smallList mb-0">
+                        <li><strong>Medellín: </strong>(604) 444 3727</li>
+                        <li><strong>Bogotá: </strong>(601) 482 4804</li>
+                        <li><strong>Cali: </strong>(602) 380 8933</li>
+                        <li><strong>Línea nacional: </strong>01 8000 978 888</li>
+                      </ul>
+                    </div>
+                    <div class="col-md-7 f-11">
+                      <ul class="smallList"> 
+                        <li> <strong>De lunes a sábado: </strong>8:00 a.m. a 6:00 p.m.</li>
+                        <li> <strong>Domingos y festivos: </strong>solo estará habilitado el IVR (audio respuesta).</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="js/vendor/jquery.min.js"></script>
+    <script type="text/javascript" src="js/vendor/slick.min.js"></script>
+    <script type="text/javascript" src="js/vendor/popper.min.js"></script>
+    <script type="text/javascript" src="js/vendor/flatpickr.min.js"></script>
+    <script src="js/vendor/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/sliders.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+  </body>
+</html>

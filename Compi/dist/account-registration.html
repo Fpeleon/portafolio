@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Verificación de identidad</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="icon" href="img/favicon.png" type="img/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.4/swiper-bundle.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&amp;family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <header id="header">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container"><a class="navbar-brand" href="#"><img class="img-fluid" src="img/vector/LogoH.svg" alt=""></a></div>
+      </nav>
+    </header>
+    <section class="vh">
+      <div class="container">
+        <div class="pb-5">
+          <div class="row justify-content-center">
+            <div class="col-11">
+              <div class="miga"><a href="home.html">Home</a><a href="accounts_registered.html">Mis cuentas Inscritas</a><strong>Inscripción de cuentas</strong></div>
+              <div class="miga migabar d-none"><a href=""> </a>
+                <div class="progress-top">
+                  <div class="bar" style="width: 50%"> </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-11 pb-5">
+              <div class="title my-3">Inscripción de cuentas</div>
+              <p>Puedes inscribir un máximo de 3 cuentas y puedes tener una cuenta favorito</p>
+            </div>
+            <div class="col-11 d-flex justify-content-center">
+              <form class="form-log-daviplata p-0" action=""> 
+                <div class="campo">
+                  <label for="">Tipo de documento</label>
+                  <select id="pet-select" name="pets">
+                    <option value="">Cédula de ciudadanía</option>
+                    <option value="dog">Cédula de extrangería</option>
+                    <option value="cat">Pasaporte</option>
+                    <option value="hamster">Nit</option>
+                  </select>
+                </div>
+                <div class="campo">
+                  <label for="">Número de documento</label>
+                  <input type="number" placeholder="11520960000"><span class="error__text">Mensaje Error</span>
+                </div>
+                <div class="campo">
+                  <label for="">Nombre completo</label>
+                  <input type="text" placeholder="ej. Maria Sofía Correo"><span class="error__text">Mensaje Error</span>
+                </div>
+                <div class="campo">
+                  <label for="">Número de celular *(cuenta Daviplata)</label>
+                  <input type="tel" placeholder="312 000 0000"><span class="error__text">Mensaje Error</span>
+                </div>
+                <div class="campo">
+                  <label for="">Apodo</label>
+                  <input type="text" placeholder="ej. Amparito"><span class="error__text">Mensaje Error</span>
+                </div>
+                <div class="box-container">
+                  <label class="switch">
+                    <input class="input-toggle" type="checkbox">
+                    <p class="text-select">Seleccionar como favorito</p>
+                    <div class="rail"><span class="circle"></span></div>
+                    <svg width="23" height="21" viewbox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M20.2913 2.9961C19.7805 2.48511 19.1741 2.07975 18.5066 1.80319C17.8392 1.52662 17.1238 1.38428 16.4013 1.38428C15.6788 1.38428 14.9634 1.52662 14.2959 1.80319C13.6285 2.07975 13.022 2.48511 12.5113 2.9961L11.4513 4.0561L10.3913 2.9961C9.3596 1.96441 7.96032 1.38481 6.50129 1.38481C5.04226 1.38481 3.64298 1.96441 2.61129 2.9961C1.5796 4.0278 1 5.42707 1 6.8861C1 8.34514 1.5796 9.74441 2.61129 10.7761L3.67129 11.8361L11.4513 19.6161L19.2313 11.8361L20.2913 10.7761C20.8023 10.2653 21.2076 9.65892 21.4842 8.99146C21.7608 8.324 21.9031 7.60859 21.9031 6.8861C21.9031 6.16362 21.7608 5.44821 21.4842 4.78075C21.2076 4.11329 20.8023 3.50686 20.2913 2.9961Z" stroke="#A7A7A7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </label>
+                </div><a class="button button-primary" href="">Inscribir cuenta</a>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><a class="button-top" href="#header"></a>
+    <footer class="footer d-none d-md-block">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-4 text"><img class="logo img-fluid" src="img/vector/LogoF.svg" alt="">
+            <p>Compi alimenta tus ganas de crecer </p>
+            <ul class="redes">
+              <li><a href="#"><img src="img/vector/facebook.svg" alt=""></a></li>
+              <li><a href="#"><img src="img/vector/twitter.svg" alt=""></a></li>
+              <li><a href="#"><img src="img/vector/instagram.svg" alt=""></a></li>
+              <li><a href="#"><img src="img/vector/whatsapp.svg" alt=""></a></li>
+              <li><a href=""><img src="img/vector/linkedin.svg" alt=""></a></li>
+            </ul>
+            <p class="small"><small>Copyright ©2023 Compi - Todos los derechos reservados   </small><small>Al crear una cuenta Compi aceptas las<a href=""><strong> Políticas de tratamiento de datos</strong></a></small></p>
+          </div>
+          <div class="col-md-5 links"> 
+            <ul>
+              <li><a href="">WhatsApp 312 000 0000</a></li>
+              <li><a href="">Preguntas frecuentes</a></li>
+              <li><a href="">Términos y condiciones</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2 button-f"> <a class="button button-primary arrow" href=""> <span>Catálogo</span></a></div>
+        </div>
+      </div>
+    </footer>
+    <footer class="footer d-md-none d-block">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 text"><img class="logo img-fluid" src="img/vector/LogoF.svg" alt="">
+            <p>Compi alimenta tus ganas de crecer</p>
+            <div class="links"> 
+              <ul class="w-100 d-flex flex-nowrap">
+                <li><a href="">WhatsApp</a></li>
+                <li><a href="">FAQS</a></li>
+                <li><a href="">Términos</a></li>
+              </ul>
+            </div>
+            <div class="button-f justify-content-start"> <a class="button button-primary arrow" href=""> <span>Catálogo</span></a></div>
+            <ul class="redes">
+              <li><a href=""><img src="img/vector/facebook.svg" alt=""></a></li>
+              <li><a href=""><img src="img/vector/twitter.svg" alt=""></a></li>
+              <li><a href=""><img src="img/vector/instagram.svg" alt=""></a></li>
+              <li><a href=""><img src="img/vector/whatsapp.svg" alt=""></a></li>
+              <li><a href=""><img src="img/vector/linkedin.svg" alt=""></a></li>
+            </ul>
+            <p class="small"><small>Copyright ©2023 Compi - Todos los derechos reservados   </small><small>Al crear una cuenta Compi aceptas las<a href=""><strong> Políticas de tratamiento de datos</strong></a></small></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="js/vendor/popper.min.js"></script>
+    <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.4/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js">  </script>
+    <script type="text/javascript" src="./js/useCamera.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+    <script type="text/javascript" src="js/calendar.js"></script>
+    <script type="text/javascript" src="js/tab_redemption.js"></script>
+    <script type="text/javascript" src="js/data_range_picker.js"></script>
+  </body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="img/favicon.png" type="img/png">
+  </head>
+  <body>
+    <header class="loginHeader"> 
+      <div class="container"> 
+        <div class="row justify-content-center"> 
+          <div class="col-md-12 col-11"> 
+            <div class="row"> 
+              <div class="col-md-3 col-6 align-self-center"><a href="home.html"> <img class="img-fluid" src="./img/vector/logo_header_butterfield.svg" alt="Logo"></a></div>
+              <div class="col-md-9 col-6 align-self-center">
+                <nav> <a class="linkMenu" href="#">Goal</a><a class="linkMenu" href="#">How to participate</a><a class="linkMenu" href="#">Benefits</a><a class="linkMenu" href="#">Change password</a>
+                  <button class="logOut">Logout</button>
+                </nav>
+                <div class="d-flex justify-content-end">
+                  <button class="menu"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="plegableMenu"> 
+      <div class="overlay"> </div>
+      <div class="content"> 
+        <nav class="nav-mobile"> 
+          <div class="close-menu"><img src="./img/vector/close-square.svg"></div>
+          <div class="text-center mb-4"> <img class="img-fluid" src="./img/vector/logo_header_butterfield.svg" alt="Logo"></div>
+          <div class="d-flex"> <img class="img-fluid icon-plegableMenu" src="./img/vector/cup.svg"><a class="linkMenu" href="home.html">Goal</a></div>
+          <div class="d-flex"> <img class="img-fluid icon-plegableMenu" src="./img/vector/star.svg"><a class="linkMenu align-self-center" href="#catalog">How to participate</a></div>
+          <div class="d-flex"> <img class="img-fluid icon-plegableMenu" src="./img/vector/like.svg"><a class="linkMenu" href="#">Benefits</a></div>
+          <div class="d-flex"> <img class="img-fluid icon-plegableMenu" src="./img/vector/lock.svg"><a class="linkMenu" href="#">Change password</a></div>
+        </nav>
+        <footer class="mb-5 text-center">
+          <button class="logOut">Logout</button>
+        </footer>
+      </div>
+    </div>
+    <section>
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-12 welcome-user pb-3 pt-3"><span>Hello, John Doe</span></div>
+          <div class="col-12">
+            <div class="carousel slide" id="carouselHome" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button class="active" type="button" data-bs-target="#carouselHome" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselHome" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active bg-home bg-home-1 align-items-center">
+                  <h2 class="pb-4">Discover how to win a Priceless™ Experience.</h2><a class="btn btn-primary btn-w-196" href="how-to-participate.html">How to participate</a>
+                </div>
+                <div class="carousel-item bg-home bg-home-2 align-items-center">
+                  <h2 class="pb-4">Win a gift card for the things you love the most</h2><a class="btn btn-primary btn-w-196" href="how-to-participate.html">How to participate            </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center pt-5 pb-5">
+          <div class="col-11 col-md-8 progress-home">
+            <h4> Track your progress</h4>
+            <p>You have from XX/XX/2024 to XX/XX/2024 to achieve your goal.</p>
+            <p>For a chance to win, you must use you Butterfield Mastercard Debit Card to make purchases and reach your accumulated spend goal</p><span>(Last update MM/DD/YYYY)</span>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-5 align-self-center">
+            <div class="contentCards"> 
+              <div class="card-info d-flex justify-content-between">
+                <div><img class="img-fluid" src="img/icons/dollar-square.svg" alt=""><span class="price ps-2">Spend goal</span></div>
+                <div class="meta-total"><span>$500/</span><span id="metaTotal">$1.500</span></div>
+              </div>
+              <div class="card-info card2 pt-3 mt-3 d-flex justify-content-between">
+                <div><img class="img-fluid" src="img/icons/receipt-text.svg" alt=""><span class="price ps-2">Categories goal</span></div>
+                <div class="meta-total"><span> 1/10</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 align-self-center mt-4 mt-md-0">
+            <div class="cardgraph">
+              <div class="cardgraph-data text-center">
+                <p class="mb-2">Your progress</p><strong class="cardgraph__chart-wrapper__value" id="metaActual">$500</strong><strong>USD</strong>
+                <input id="changer" type="number" min="0" max="100" name="changer" value="102">
+              </div>
+              <svg height="178" width="178">
+                <circle stroke-width="16" cx="89" cy="89" r="79" fill="none" stroke="#C8DAE1"></circle>
+                <circle class="progress bg-progress" id="progress" stroke-width="16" cx="89" cy="89" r="79" fill="none"></circle>
+              </svg>
+            </div>
+          </div>
+          <div class="col-md-8 mt-4 mt-md-5">
+            <div class="row justify-content-evenly">
+              <div class="col-md-2 col-4 mb-3 mb-md-0 mx-1 p-0">
+                <div class="categoryCircle">
+                  <div class="bg-categoryCircles"><img class="img-fluid" src="./img/icons/fi_check-circle.svg" alt=""></div><span>Every spend</span>
+                </div>
+              </div>
+              <div class="col-md-2 col-4 mb-3 mb-md-0 mx-1 p-0">
+                <div class="categoryCircle">
+                  <div class="bg-categoryCircles"><img class="img-fluid" src="./img/icons/fi_check-circle.svg" alt=""></div><span>General department stores</span>
+                </div>
+              </div>
+              <div class="col-md-2 col-4 mb-3 mb-md-0 mx-1 p-0">
+                <div class="categoryCircle disabled"> 
+                  <div class="bg-gray"><img class="img-fluid" src="./img/icons/u_lock.svg" alt=""></div><span>Eating places and bars</span>
+                </div>
+              </div>
+              <div class="col-md-2 col-4 mb-3 mb-md-0 mx-1 p-0">
+                <div class="categoryCircle disabled"> 
+                  <div class="bg-gray"><img class="img-fluid" src="./img/icons/u_lock.svg" alt=""></div><span>Miscellaneous services</span>
+                </div>
+              </div>
+              <div class="col-md-2 col-4 mb-3 mb-md-0 mx-1 p-0">
+                <div class="categoryCircle disabled"> 
+                  <div class="bg-gray"><img class="img-fluid" src="./img/icons/u_lock.svg" alt=""></div><span>Arts entertainment and recreation</span>
+                </div>
+              </div>
+              <div class="col-md-2 col-4 mb-3 mb-md-0 mx-1 p-0">
+                <div class="categoryCircle disabled"> 
+                  <div class="bg-gray"><img class="img-fluid" src="./img/icons/u_lock.svg" alt=""></div><span>Information products and services</span>
+                </div>
+              </div>
+              <div class="col-md-2 col-4 mb-3 mb-md-0 mx-1 p-0">
+                <div class="categoryCircle disabled"> 
+                  <div class="bg-gray"><img class="img-fluid" src="./img/icons/u_lock.svg" alt=""></div><span>Travel and entertainment</span>
+                </div>
+              </div>
+              <div class="col-md-2 col-4 mb-3 mb-md-0 mx-1 p-0">
+                <div class="categoryCircle disabled"> 
+                  <div class="bg-gray"><img class="img-fluid" src="./img/icons/u_lock.svg" alt=""></div><span>Sporting goods and hobbies</span>
+                </div>
+              </div>
+              <div class="col-md-2 col-4 mb-3 mb-md-0 mx-1 p-0">
+                <div class="categoryCircle disabled"> 
+                  <div class="bg-gray"><img class="img-fluid" src="./img/icons/u_lock.svg" alt=""></div><span>Home improvement centers</span>
+                </div>
+              </div>
+              <div class="col-md-2 col-4 mb-3 mb-md-0 mx-1 p-0">
+                <div class="categoryCircle disabled"> 
+                  <div class="bg-gray"><img class="img-fluid" src="./img/icons/u_lock.svg" alt=""></div><span>Apparel</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8 mt-3">
+            <div class="row bg-dawnblue align-items-center">
+              <div class="col-md-6">
+                <div class="card-info d-flex justify-content-between">
+                  <div class="card-complete"><img class="img-fluid" src="img/icons/receipt-text.svg" alt=""><span class="price ps-3">Make less than XXX cash withdrawals during the campaign</span></div>
+                </div>
+              </div>
+              <div class="col-md-3 col-8 mt-4 mt-md-0">
+                <div class="row justify-content-center">
+                  <div class="col-md-2 raspa raspa-x"></div>
+                  <div class="col-md-2 raspa raspa-x"></div>
+                  <div class="col-md-2 raspa raspa-1"></div>
+                  <div class="col-md-2 raspa raspa-1"></div>
+                  <div class="col-md-2 raspa raspa-1"></div>
+                  <div class="col-md-2 raspa raspa-1"></div>
+                  <div class="col-md-2 raspa raspa-1"></div>
+                  <div class="col-md-2 raspa raspa-1"></div>
+                  <div class="col-md-2 raspa raspa-1"></div>
+                  <div class="col-md-2 raspa raspa-1"></div>
+                  <div class="col-md-2 raspa raspa-1"></div>
+                  <div class="col-md-2 raspa raspa-1"></div>
+                </div>
+              </div>
+              <div class="col-md-3 col-4 total-raspa mt-4 mt-md-0 p-0 ps-4"><span>You have 10 out of 12 cash withdrawals left.</span></div>
+            </div>
+            <div class="row bg-midnghtblue align-items-center text-center mb-5">
+              <div class="col-12"> <img class="img-fluid" src="img/icons/card-tick.svg" alt=""><span class="ps-3">The less cash withdrawals the better</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <div class="row justify-content-between align-items-center">
+              <div class="col-md-4 mb-md-0 mb-3">
+                <h4 class="pe-md-2 me-md-1">Amazing rewards with your Butterfield Mastercard Debit Card</h4>
+                <div class="arrow-animated d-none d-sm-block"><img class="img-fluid" src="img/icons/arrow.svg" alt=""></div>
+              </div>
+              <div class="col-md-4">
+                <div class="card-reward"><img class="img-fluid" src="img/header-ed-mobile.jpg" alt="">
+                  <h5>Win a one-day Cayman experience</h5>
+                  <p class="ps-4 pe-4">Crystal clear waters and endless sunshine in the Cayman Islands</p><a class="btn btn-primary btn-w-196">Find out more</a>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card-reward disabled"><img class="img-fluid" src="img/disabled-header.jpg" alt="">
+                  <h5>Maximise your rewards by withdrawing less cash</h5>
+                  <P>Win a $1,500 USD gift card for reaching your goal and making less than X cash withdrawals</P><a class="btn btn-disabled btn-w-196">Lock</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><a class="button-top" href="#header"></a>
+    <footer class="footer">
+      <div class="container"> 
+        <div class="row justify-content-md-between justify-content-center">
+          <div class="col-md-auto col-11">
+            <h6 class="mb-4">The Bank of N.T. Butterfield & Son Limited</h6>
+            <ul> 
+              <li> 
+                <p class="mb-0">65 Front Street</p>
+                <p class="mb-0">Hamilton, HM12</p>
+                <p>BERMUDA</p>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-auto col-11">
+            <p class="strong mb-4">LEGAL</p>
+            <ul> 
+              <li> <a class="mb-4" href="#">Terms and conditions</a><a href="#">FAQs</a></li>
+            </ul>
+          </div>
+          <div class="col-md-auto col-11">
+            <p class="strong mb-4">CONTACT </p>
+            <ul> 
+              <li> 
+                <p class="mb-4">018000 6213 7613   </p>
+                <p>www.butterfieldonline.com</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="bg-bottom">
+      <p>©Butterfield 2024      </p>
+    </div>
+    <script type="text/javascript" src="js/vendor/popper.min.js"></script>
+    <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>

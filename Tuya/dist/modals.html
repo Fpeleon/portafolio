@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Modales</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/flatpickr.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="./img/brand/favicon.png" type="img/png">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  </head>
+  <body>
+    <header class="loginHeader"> <img class="img-fluid" src="./img/vector/logo_tuya.svg" alt="Logo Tuya"></header>
+    <section class="bg-yellow py-5 min-h">
+      <div class="container"> 
+        <div class="row">
+          <div class="col-12 text-center"> 
+            <h3 class="text-dark2">Modales</h3>
+          </div>
+        </div>
+        <div class="row justify-content-center mt-4 mt-md-5">
+          <div class="col-md-3 col-9 mb-3"><a class="btn btn-gray" href="#" target="_blank" type="button" data-bs-toggle="modal" data-bs-target="#codeID">Insertar 5 dígitos</a></div>
+          <div class="col-md-3 col-9 mb-3"><a class="btn btn-gray" href="#" target="_blank" type="button" data-bs-toggle="modal" data-bs-target="#modalConfirmation">Confirmación</a></div>
+          <div class="col-md-3 col-9 mb-3"><a class="btn btn-gray" href="#" target="_blank" type="button" data-bs-toggle="modal" data-bs-target="#modalBonus">Bono</a></div>
+          <div class="col-md-3 col-9 mb-3"><a class="btn btn-gray" href="#" target="_blank" type="button" data-bs-toggle="modal" data-bs-target="#modalProgreso">10% de progreso</a></div>
+        </div>
+      </div>
+    </section>
+    <div class="modal fade" id="codeID" tabindex="-1" aria-labelledby="codeID" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="box-close">
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"><img src="../dist/img/vector/close-circle-modal.svg" alt=""></button>
+          </div>
+          <div class="modal-body">
+            <h4 class="my-2">¡Falta poco para ingresar a esta experiencia!</h4>
+            <p>Ingresa con los 5 últimos dígitos de la Tarjeta de Crédito con la que estás participando.</p>
+            <label class="text-neutro3">Últimos 5 dígitos de tu Tarjeta          </label>
+            <form>
+              <div class="d-flex justify-content-center inputsCode mt-3" id="code">
+                <input id="uno" type="tel" maxlength="1" onkeypress="return (event.charCode &gt;= 1 &amp;&amp; event.charCode &lt;= 57)" onkeyup="if (this.value.length == this.getAttribute('maxlength')) dos.focus()" name="uno">
+                <input id="dos" type="tel" name="dos" maxlength="1" onkeypress="return (event.charCode &gt;= 1 &amp;&amp; event.charCode &lt;= 57)" onkeyup="if (this.value.length == this.getAttribute('maxlength')) tres.focus()">
+                <input id="tres" type="tel" name="tres" maxlength="1" onkeypress="return (event.charCode &gt;= 1 &amp;&amp; event.charCode &lt;= 57)" onkeyup="if (this.value.length == this.getAttribute('maxlength')) cuatro.focus()">
+                <input id="cuatro" type="tel" name="cuatro" maxlength="1" onkeypress="return (event.charCode &gt;= 1 &amp;&amp; event.charCode &lt;= 57)" onkeyup="if (this.value.length == this.getAttribute('maxlength')) cinco.focus()">
+                <input id="cinco" type="tel" name="cinco" maxlength="1" onkeypress="return (event.charCode &gt;= 1 &amp;&amp; event.charCode &lt;= 57)" onkeyup="if (this.value.length == this.getAttribute('maxlength')) return">
+              </div>
+            </form>
+            <div class="captcha-modal">   <img class="img-fluid w-100" src="./img/brand/captcha.png" alt=""></div>
+            <div class="row justify-content-center mt-4"> 
+              <div class="col-md-6 col-8">
+                <button class="btn btn-gray" type="button" data-bs-dismiss="modal">Ingresar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalConfirmation" tabindex="-1" aria-labelledby="modalConfirmation" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <div class="text-center"> 
+              <p class="m-0">En esta campaña solo estás participando con tu Tarjeta [Carulla/éxito]. <strong>Por favor ingresa nuevamente </strong>los 4 últimos dígitos de tu tarjeta participante para continuar.</p>
+            </div>
+            <div class="row justify-content-center mt-4"> 
+              <div class="col-md-6 col-8">
+                <button class="btn btn-gray" type="button" data-bs-dismiss="modal">Aceptar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalBonus" tabindex="-1" aria-labelledby="modalBonus" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <div class="text-center"> 
+              <h4 class="mb-4 px-3">¿Seguro que deseas redimir este bono?</h4>
+            </div>
+            <div class="row justify-content-center mt-4"> 
+              <div class="col-6">
+                <button class="btn btn-gray" type="button" data-bs-dismiss="modal">¡Sí quiero!</button>
+              </div>
+              <div class="col-6">
+                <button class="btn btn-line" type="button" data-bs-dismiss="modal">Cancelar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalProgreso" tabindex="-1" aria-labelledby="modalBonus" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-progreso">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <div class="text-center"> 
+              <h3 class="mb-4 px-3">¡Empezaste con el pie derecho!</h3>
+              <p class="mb-2">Ya recibiste el</p><img class="img-fluid mb-2" src="./img/vector/10-porciento.svg" alt="">
+              <p> <strong>de tu progreso </strong> para que te animes a cumplir tu meta.</p>
+            </div>
+            <div class="row justify-content-center mt-4"> 
+              <div class="col-6">
+                <button class="btn btn-gray" type="button" data-bs-dismiss="modal">Entendido</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer"> 
+      <div class="py-md-5">
+        <div class="container"> 
+          <div class="row justify-content-center"> 
+            <div class="col-md-4 col-11 mb-3 mb-md-0">
+              <div class="d-flex"><img class="img-fluid d-block d-md-none vig" src="./img/vector/vigilado.svg" alt=""><img class="img-fluid ms-md-3 ms-0" src="./img/vector/logo_footer.svg" alt=""></div>
+            </div>
+            <div class="col-md-8 col-11">
+              <div class="row"> 
+                <div class="col-md-4 py-4 py-md-0">
+                  <h5 class="mb-md-4">Legales</h5><a class="text-link d-block f-14" href="#">Términos y condiciones </a><a class="text-link d-block f-14 m-0" href="#">Preguntas frecuentes</a>
+                </div>
+                <div class="col-md-8 divider pt-4 pt-md-0">
+                  <h5 class="mb-md-4">Contacto</h5>
+                  <p><strong class="f-14">Si tienes dudas con tus transacciones comunícate a</strong></p>
+                  <div class="row"> 
+                    <div class="col-md-5">
+                      <ul class="smallList mb-0">
+                        <li><strong>Medellín: </strong>(604) 444 3727</li>
+                        <li><strong>Bogotá: </strong>(601) 482 4804</li>
+                        <li><strong>Cali: </strong>(602) 380 8933</li>
+                        <li><strong>Línea nacional: </strong>01 8000 978 888</li>
+                      </ul>
+                    </div>
+                    <div class="col-md-7 f-11">
+                      <ul class="smallList"> 
+                        <li> <strong>De lunes a sábado: </strong>8:00 a.m. a 6:00 p.m.</li>
+                        <li> <strong>Domingos y festivos: </strong>solo estará habilitado el IVR (audio respuesta).</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="js/vendor/jquery.min.js"></script>
+    <script type="text/javascript" src="js/vendor/slick.min.js"></script>
+    <script type="text/javascript" src="js/vendor/popper.min.js"></script>
+    <script type="text/javascript" src="js/vendor/flatpickr.min.js"></script>
+    <script src="js/vendor/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/sliders.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+  </body>
+</html>

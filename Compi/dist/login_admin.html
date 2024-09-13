@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Navegación</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="icon" href="img/favicon.png" type="img/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.4/swiper-bundle.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&amp;family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <section class="login pb-5 mb-5 mb-md-0 pb-md-0">
+      <div class="container-fluid">
+        <div class="row row-login">
+          <div class="col-md-6 p-0"><img class="d-block d-md-none w-100" src="img/pixel/loginM.png" alt=""><img class="d-none d-md-block w-100" src="img/pixel/login.png" alt=""></div>
+          <div class="col-md-6 d-flex align-items-center justify-content-center">
+            <div class="text-login-admin d-flex flex-wrap justify-content-center pt-5 pt-md-0">
+              <div class="logo mt-5 mb-4 d-none d-md-block"><img src="img/vector/logocompiLogin.svg" alt=""></div>
+              <h3 class="title-log d-none d-md-block order-1">Bienvenido a Compi tu mejor aliado</h3>
+              <form class="form-log order-2" action=""> 
+                <div class="campo w-100">
+                  <label for="">Usuario </label>
+                  <input type="email" placeholder="ejemplo.jhondoe@gmail.com"><span class="error__text">Mensaje Error</span>
+                </div>
+                <div class="campo password whit-icon">
+                  <label for="">Contraseña </label>
+                  <input id="password1" type="password" placeholder="Contraseña ">
+                  <div class="icon"></div><span class="error__text">Mensaje Error</span>
+                </div>
+              </form>
+              <div class="d-block order-3 mb-3 ms-auto"><a class="link link-green text-decoration-none" href=""><small>¿Olvidaste tu contraseña?</small></a></div>
+              <div class="pb-3 order-4"><img class="img-fluid" src="img/pixel/newCaptchaAnchor.png" alt=""></div>
+              <div class="campo checkBox order-md-5 order-5">
+                <input id="terminos" type="checkbox" name="terminos">
+                <label for="terminos">Al crear una cuenta con Compi, aceptas nuestros <a href="#">Términos y condiciones </a>y las normas de <a href="#">Protección de datos personales.</a></label>
+              </div><a class="button button-login mb-3 mt-md-5 order-md-5 order-4 disabled" href="#">Siguiente</a>
+              <div class="order-5 d-flex justify-contet-center flex-column"><img class="w-25 mb-3 mx-auto" src="./img/vector/bgLogin.svg"><a class="link link-green" href="#"><small>Acceder al perfil tendero</small></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="d-block d-md-none footer-login"> <a class="button-top" href="#header"></a>
+      <footer class="footer d-none d-md-block">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-4 text"><img class="logo img-fluid" src="img/vector/LogoF.svg" alt="">
+              <p>Compi alimenta tus ganas de crecer </p>
+              <ul class="redes">
+                <li><a href="#"><img src="img/vector/facebook.svg" alt=""></a></li>
+                <li><a href="#"><img src="img/vector/twitter.svg" alt=""></a></li>
+                <li><a href="#"><img src="img/vector/instagram.svg" alt=""></a></li>
+                <li><a href="#"><img src="img/vector/whatsapp.svg" alt=""></a></li>
+                <li><a href="#"><img src="img/vector/linkedin.svg" alt=""></a></li>
+              </ul>
+              <p class="small"><small>Copyright ©2023 Compi - Todos los derechos reservados   </small><small>Al crear una cuenta Compi aceptas las<a href=""><strong> Políticas de tratamiento de datos</strong></a></small></p>
+            </div>
+            <div class="col-md-5 links"> 
+              <ul>
+                <li><a href="">WhatsApp 312 000 0000</a></li>
+                <li><a href="">Preguntas frecuentes</a></li>
+                <li><a href="">Términos y condiciones</a></li>
+              </ul>
+            </div>
+            <div class="col-md-2 button-f"> <a class="d-none button button-primary arrow" href=""> <span>Catálogo</span></a></div>
+          </div>
+        </div>
+      </footer>
+      <footer class="footer d-md-none d-block">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 text"><img class="logo img-fluid" src="img/vector/LogoF.svg" alt="">
+              <p>Compi alimenta tus ganas de crecer</p>
+              <div class="links"> 
+                <ul class="w-100 d-flex flex-nowrap">
+                  <li><a href="">WhatsApp</a></li>
+                  <li><a href="">FAQS</a></li>
+                  <li><a href="">Términos</a></li>
+                </ul>
+              </div>
+              <div class="button-f justify-content-start"> <a class="d-none button button-primary arrow" href=""> <span>Catálogo</span></a></div>
+              <ul class="redes">
+                <li><a href=""><img src="img/vector/facebook.svg" alt=""></a></li>
+                <li><a href=""><img src="img/vector/twitter.svg" alt=""></a></li>
+                <li><a href=""><img src="img/vector/instagram.svg" alt=""></a></li>
+                <li><a href=""><img src="img/vector/whatsapp.svg" alt=""></a></li>
+                <li><a href=""><img src="img/vector/linkedin.svg" alt=""></a></li>
+              </ul>
+              <p class="small"><small>Copyright ©2023 Compi - Todos los derechos reservados   </small><small>Al crear una cuenta Compi aceptas las<a href=""><strong> Políticas de tratamiento de datos</strong></a></small></p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script type="text/javascript" src="js/vendor/popper.min.js"></script>
+    <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.4/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js">  </script>
+    <script type="text/javascript" src="./js/useCamera.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+    <script type="text/javascript" src="js/calendar.js"></script>
+    <script type="text/javascript" src="js/tab_redemption.js"></script>
+    <script type="text/javascript" src="js/data_range_picker.js"></script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+  <title>Toma de Fotos</title>
+</head>
+<h1>Toma una foto</h1>
+<!-- Botón para tomar la foto-->
+<button id="startButton">Tomar Foto</button>
+<!-- Botón para borrar la foto-->
+<button id="deleteButton" style="display: none;">Borrar Foto</button>
+<!-- Contenedor para mostrar la foto-->
+<div id="photoContainer"><img id="photo" alt="Tu foto aparecerá aquí" style="display: none;"></div>
+<script>
+  const startButton = document.getElementById('startButton');
+  const deleteButton = document.getElementById('deleteButton');
+  const photoContainer = document.getElementById('photoContainer');
+  const photo = document.getElementById('photo');
+  // Función para tomar una foto
+  startButton.addEventListener('click', async () => {
+  try {
+  const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+  // Mostrar la cámara en un elemento de video
+  const video = document.createElement('video');
+  photoContainer.appendChild(video);
+  video.srcObject = stream;
+  await video.play();
+  // Capturar una imagen de la cámara
+  const canvas = document.createElement('canvas');
+  canvas.width = video.videoWidth;
+  canvas.height = video.videoHeight;
+  canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+  const imageUrl = canvas.toDataURL('image/jpeg');
+  photo.src = imageUrl;
+  // Mostrar los botones y ocultar el video
+  startButton.style.display = 'none';
+  deleteButton.style.display = 'block';
+  video.style.display = 'none';
+  // Detener la cámara
+  stream.getTracks().forEach(track => track.stop());
+  } catch (error) {
+  console.error('Error al acceder a la cámara:', error);
+  }
+  });
+  // Función para borrar la foto
+  deleteButton.addEventListener('click', () => {
+  photo.src = '';
+  startButton.style.display = 'block';
+  deleteButton.style.display = 'none';
+  photo.style.display = 'none';
+  });
+</script>

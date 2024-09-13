@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="icon" href="img/favicon.png" type="img/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.4/swiper-bundle.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&amp;family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <header class="header-admin" id="header">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container px-md-0"><a class="navbar-brand" href="#"><img class="img-fluid" src="img/vector/LogoH.svg" alt="home.html"></a>
+          <div class="lupa d-inline-block d-md-none" type="button" data-bs-toggle="modal" data-bs-target="#seeker"><img class="img-fluid" src="img/vector/search-normal.svg" alt=""></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-lg-none close-menu">Menu</div>
+            <div class="d-md-none user">
+              <div class="info_admin row">
+                <div class="col-4 col-md-4 p-0"><img src="/dist/img/compis profile.png" alt=""></div>
+                <div class="col-7 col-md-8 sidebar_info_profile"><span class="profile_role">Perfil admin</span><span class="profile_name">Camila Arboleda Rios Zapata Martinez Gutierrez</span></div>
+              </div>
+            </div>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item d-lg-none"><a class="events active nav-link d-flex justify-content-between" href="dashboard.html"><span>Eventos</span><img src="./img/vector/layers.svg" alt="layers"></a></li>
+              <li class="nav-item d-lg-none"><a class="events nav-link d-flex justify-content-between" href="dashboard.html"><span>Catálogo</span><img src="./img/vector/cards.svg" alt="layers"></a></li>
+              <li class="nav-item d-lg-none"><a class="events nav-link d-flex justify-content-between" href="dashboard.html"><span>Fijación muro</span><img src="./img/vector/pin2.svg" alt="layers"></a></li>
+              <li class="nav-item d-lg-none"><a class="events nav-link d-flex justify-content-between" href="dashboard.html"><span>Blog (CMS)</span><img src="./img/vector/blog-icon.svg" alt="layers"></a></li>
+              <li class="nav-item d-lg-none disable"><a class="events nav-link d-flex justify-content-between" href="dashboard.html"><span>Informes (Power BI)</span><img src="./img/vector/data.svg" alt="layers"></a></li>
+              <li class="nav-item dropdown d-none d-md-block"><a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img class="rounded-circle" src="https://picsum.photos/id/237/40/40" alt=""></a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li class="mb-2"><a class="dropdown-item" href="#">
+                      <div class="info-user d-flex"> <img class="me-2" src="./img/vector/icon-user-header.svg">
+                        <div class="text-info-user"><span class="green">Guillermo Francisco Castrillon Gutierrez</span><span class="gray">sofia.guerrero@gmail.com</span></div>
+                      </div></a></li>
+                  <li class="mb-2"><a class="dropdown-item" href="#">
+                      <div class="info-user d-flex align-items-center"><img class="me-2 circle-green" src="./img/vector/cuentas.svg">
+                        <div class="text-info-user">Cuentas</div>
+                      </div></a></li>
+                </ul>
+              </li>
+              <li class="nav-item butons d-flex d-md-none"><a href="">PQRS</a><a href="">TYC</a></li>
+              <li class="nav-item logout"><a class="nav-link d-flex align-items-center" href="#"> 
+                  <div class="icon m-0 icon-end-sesion">
+                    <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M1.25 12C1.25 6.64215 5.43956 2.25 10.6667 2.25C12.3863 2.25 13.9992 2.72791 15.3862 3.56112C15.7413 3.77442 15.8562 4.23518 15.6429 4.59025C15.4296 4.94532 14.9689 5.06025 14.6138 4.84696C13.4513 4.14864 12.1042 3.75 10.6667 3.75C6.32084 3.75 2.75 7.41672 2.75 12C2.75 16.5833 6.32084 20.25 10.6667 20.25C12.1042 20.25 13.4513 19.8514 14.6138 19.153C14.9689 18.9397 15.4296 19.0547 15.6429 19.4097C15.8562 19.7648 15.7413 20.2256 15.3862 20.4389C13.9992 21.2721 12.3863 21.75 10.6667 21.75C5.43956 21.75 1.25 17.3578 1.25 12ZM17.4697 7.46967C17.7626 7.17678 18.2374 7.17678 18.5303 7.46967L22.5303 11.4697C22.8232 11.7626 22.8232 12.2374 22.5303 12.5303L18.5303 16.5303C18.2374 16.8232 17.7626 16.8232 17.4697 16.5303C17.1768 16.2374 17.1768 15.7626 17.4697 15.4697L20.1893 12.75H9C8.58579 12.75 8.25 12.4142 8.25 12C8.25 11.5858 8.58579 11.25 9 11.25H20.1893L17.4697 8.53033C17.1768 8.23744 17.1768 7.76256 17.4697 7.46967Z"></path>
+                    </svg>
+                  </div><span>Cerrar sesión</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="modal fade" id="seeker" tabindex="-1" aria-labelledby="seekerLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="btn-close mt-0" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="input"> 
+              <input class="modal-busqueda w-100" type="text" placeholder="Bono hamburguesa">
+            </div>
+            <div class="result">
+              <h4>Sugerencias</h4>
+              <div class="list-search">
+                <div class="item"> 
+                  <p>Hamburguesas El Corral </p>
+                </div>
+                <div class="item"> 
+                  <p>Combo MB</p>
+                </div>
+                <div class="item"> 
+                  <p>Hamburguesas McDonald's </p>
+                </div>
+                <div class="item"> 
+                  <p>Rapidogs </p>
+                </div>
+                <div class="item"> 
+                  <p>Jenny's</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="px-0">
+      <div class="d-flex">
+        <aside class="lateralMenu" id="lateralMenu">
+          <nav>
+            <button class="btn_expand" id="btn_expand" onclick="changeSidebar()"><img src="./img/vector/BotonExpandir.svg" alt=""></button>
+            <div class="info_admin row">
+              <div class="col-12 col-md-4 p-0"><img src="/dist/img/compis profile.png" alt=""></div>
+              <div class="col-12 col-md-8 sidebar_info_profile"><span class="profile_role">Perfil admin</span><span class="profile_name">Camila Arboleda Rios Zapata Martinez Gutierrez</span></div>
+            </div><a class="events active" href="dashboard.html"><span>Eventos</span><img src="./img/vector/layers.svg" alt="layers"></a><a class="catalog disable" href="admin_user_panel.html"><span>Catálogo</span><img src="./img/vector/cards.svg" alt="cards"></a><a class="wall disable" href="#"><span>Fijación muro</span><img src="./img/vector/pin2.svg" alt="pin"></a><a class="blog disable" href="admin_form_crear_reto.html"><span>Blog (CMS)</span><img src="./img/vector/blog-icon.svg" alt="layers"></a><a class="reports disable" href="admin_points_panel.html"><span>Informes (Power BI)</span><img src="./img/vector/data.svg" alt="data"></a>
+          </nav>
+        </aside>
+        <div class="contentDashboard bg-graylight-admin">
+          <div class="container-fluid py-5 py-md-5">
+            <div class="row justify-content-center">
+              <div class="col-12 col-md-12 col-lg-6">
+                <div class="miga_admin"><a href="dashboard.html"><img src="./img/vector/layers.svg"><span>Eventos</span></a><img src="./img/vector/chevron-rigth-black.svg"><strong>Crear evento</strong></div>
+                <div class="steps-events">
+                  <div class="step">
+                    <div class="circle-number active">1</div>
+                    <div class="circle-text">Clasificación de la audiencia</div>
+                  </div>
+                  <div class="step">
+                    <div class="circle-number step-border active">2</div>
+                    <div class="circle-text">Selección de la dinámica</div>
+                  </div>
+                  <div class="step">
+                    <div class="circle-number active">3</div>
+                    <div class="circle-text">Configuración de la dinámica</div>
+                  </div>
+                  <div class="step-line"></div>
+                  <div class="step-line-active" style="width: 100%;"></div>
+                </div>
+                <div class="title mb-4">
+                  <h1 class="text-blue-dark text-blue-dark_h1">Crear un evento</h1>
+                  <p class="text-events">
+                    Ingresa las características principales de tu evento para crearlo. Para conocer más información puedes ver las 
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#dinamicasEventos">dinámicas</button>
+                  </p>
+                </div>
+                <div class="audience">
+                  <div class="title mb-4">
+                    <h2>Clasificación de la audiencia</h2>
+                  </div>
+                  <form class="form-event-summary">
+                    <div class="wrap-radio">
+                      <input id="Segmento" type="radio" name="audience" value="Segmento">
+                      <label for="Segmento">Segmento</label>
+                    </div>
+                    <div class="wrap-radio">
+                      <input id="Agencias" type="radio" name="audience" value="Agencias">
+                      <label for="Agencias">Agencias</label>
+                    </div>
+                    <div class="wrap-radio">
+                      <input id="Distribuidores" type="radio" name="audience" value="Distribuidores">
+                      <label for="Distribuidores">Distribuidores</label>
+                    </div>
+                    <div class="wrap-radio">
+                      <input id="Todos" type="radio" name="audience" value="Todos" checked="">
+                      <label for="Todos">Todos</label>
+                    </div>
+                  </form>
+                  <div class="campo col-12">
+                    <label for="">Nombre del evento</label>
+                    <input type="text" placeholder="Nombre del evento"><span class="error__text">Mensaje Error</span>
+                  </div>
+                  <div class="campo col-12">
+                    <label for="">Descripción del evento</label>
+                    <input type="text" placeholder="Nombre del evento"><span class="error__text">Mensaje Error</span>
+                  </div>
+                  <div class="col-12 d d-md-flex justify-content-between">
+                    <div class="campo col-12 col-md-6 me-md-3">
+                      <label for="">Fecha inicial</label>
+                      <input id="init_date" type="date" placeholder="dd/mm/aaaa"><span class="error__text">Mensaje Error</span>
+                    </div>
+                    <div class="campo col-12 col-md-6">
+                      <label for="">Fecha final</label>
+                      <input id="end_date" type="date" placeholder="dd/mm/aaaa"><span class="error__text">Mensaje Error</span>
+                    </div>
+                  </div>
+                  <div class="campo col-12">
+                    <label for="">Selecciona el segmento</label>
+                    <select name="segmento">
+                      <option value="" disabled="" selected="">Bronce</option>
+                      <option value="0">Lorem, ipsum.</option>
+                      <option value="1">Lorem, ipsum.</option>
+                      <option value="2">Lorem, ipsum.</option>
+                      <option value="">Lorem, ipsum.</option>
+                    </select><span class="error__text">Mensaje Error</span>
+                  </div>
+                  <div class="campo col-12">
+                    <label for="">Selecciona las agencias</label>
+                    <select class="selected-agencies" name="segmento">
+                      <option value="" disabled="" selected="">Buscar agencias</option>
+                      <option value="0">249_Medellín</option>
+                      <option value="1">249_Medellín</option>
+                      <option value="2">249_Medellín</option>
+                      <option value="3">249_Medellín</option>
+                      <option value="4">249_Medellín</option>
+                      <option value="5">249_Medellín</option>
+                      <option value="6">249_Medellín</option>
+                      <option value="7">249_Medellín</option>
+                      <option value="8">249_Medellín</option>
+                      <option value="9">249_Medellín</option>
+                      <option value="10">249_Medellín</option>
+                      <option value="11">249_Medellín</option>
+                      <option value="12">249_Medellín</option>
+                      <option value="13">249_Medellín</option>
+                    </select><span class="error__text">Mensaje Error</span>
+                  </div>
+                  <div class="campo col-12 agencies">
+                    <label for="">Agencias seleccionadas</label>
+                    <div class="selected-agencies">
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, perspiciatis mollitia veniam accusantium minima illo atque fugit iusto doloremque nostrum, reiciendis ullam accusamus sapiente nam earum aspernatur vero optio cumque!</p>
+                      <button><img src="./img/vector/Trash.svg" alt=""></button>
+                    </div>
+                    <div class="selected-agencies">
+                      <p>256_Pasto</p>
+                      <button><img src="./img/vector/Trash.svg" alt=""></button>
+                    </div>
+                    <div class="selected-agencies">
+                      <p>256_Pasto</p>
+                      <button><img src="./img/vector/Trash.svg" alt=""></button>
+                    </div>
+                    <div class="selected-agencies">
+                      <p>256_Pasto</p>
+                      <button><img src="./img/vector/Trash.svg" alt=""></button>
+                    </div>
+                    <div class="selected-agencies">
+                      <p>256_Pasto</p>
+                      <button><img src="./img/vector/Trash.svg" alt=""></button>
+                    </div>
+                    <div class="selected-agencies">
+                      <p>256_Pasto</p>
+                      <button><img src="./img/vector/Trash.svg" alt=""></button>
+                    </div>
+                    <div class="selected-agencies">
+                      <p>256_Pasto</p>
+                      <button><img src="./img/vector/Trash.svg" alt=""></button>
+                    </div>
+                    <div class="selected-agencies">
+                      <p>256_Pasto</p>
+                      <button><img src="./img/vector/Trash.svg" alt=""></button>
+                    </div>
+                    <div class="selected-agencies">
+                      <p>256_Pasto</p>
+                      <button><img src="./img/vector/Trash.svg" alt=""></button>
+                    </div>
+                    <div class="selected-agencies">
+                      <p>256_Pasto</p>
+                      <button><img src="./img/vector/Trash.svg" alt=""></button>
+                    </div>
+                    <div class="selected-agencies">
+                      <p>256_Pasto</p>
+                      <button><img src="./img/vector/Trash.svg" alt=""></button>
+                    </div>
+                    <div class="selected-agencies">
+                      <p>256_Pasto</p>
+                      <button><img src="./img/vector/Trash.svg" alt=""></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="dynamic-select">
+                  <div class="title mb-4">
+                    <h2>Selección de la dinámica</h2>
+                  </div>
+                  <div class="campo col-12">
+                    <label for="">Tipo de dinámica</label>
+                    <select name="dinamica">
+                      <option value="" disabled="" selected="">Selecciona la dinámica</option>
+                      <option value="0">Lorem, ipsum.</option>
+                      <option value="1">Lorem, ipsum.</option>
+                      <option value="2">Lorem, ipsum.</option>
+                      <option value="">Lorem, ipsum.</option>
+                    </select><span class="error__text">Mensaje Error</span>
+                  </div>
+                  <div class="campo col-12">
+                    <label for="">Puntos a ganar</label>
+                    <input type="number" placeholder="ejm. 500"><span class="error__text">Mensaje Error</span>
+                  </div>
+                  <div class="campo col-12">
+                    <label for="">Cantidad máxima de ganadores</label>
+                    <input type="number" placeholder="ejm. 100 "><span class="error__text">Mensaje Error</span>
+                  </div>
+                </div>
+                <div class="dynamics-config">
+                  <div class="title mb-4">
+                    <h2>Configuración de la dinámica</h2>
+                  </div>
+                  <div class="campo col-12">
+                    <label for="">Cantidad mínima de pedidos</label>
+                    <input type="number" placeholder="ejm. 200 "><span class="error__text">Mensaje Error</span>
+                  </div>
+                  <div class="col-12 col-md-5 mt-5 mb-4">
+                    <button class="button button-line w-100 bg-light"><img src="./img/vector/arrow1-green.svg" alt=""></button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 p-0 event-summary">
+                <div class="accordion" id="accordion-event-summary">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <div class="title-summary">Resumen del evento...</div>
+                      </button>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="collapseOne" aria-labelledby="headingOne" data-bs-parent="#accordion-event-summary">
+                      <div class="accordion-body event-summary">
+                        <div class="title-summary d-none d-md-block">Resumen del evento</div>
+                        <div class="subtitle-summary">Clasificación de la audiencia</div>
+                        <div class="item-summary">
+                          <p>Audiencia</p><small>Distribuidores</small>
+                        </div>
+                        <div class="item-summary">
+                          <p>Nombre</p><small>Yogures y quesos</small>
+                        </div>
+                        <div class="item-summary">
+                          <p>Descripción del evento</p><small>....</small>
+                        </div>
+                        <div class="item-summary">
+                          <p>Fechas</p><small> <img class="me-2" src="/dist/img/icons/calendar-black.svg" alt=""><small>01/02/2026</small></small>
+                        </div>
+                        <div class="item-summary">
+                          <p>Distribuidores</p>
+                          <div class="text-end"><small class="dealers">485_(FELAM)COMERCIALIZADORA, 486_DIGOMAR SAS, 487_DISTRIBUCCIONES S.A.SGPRS, 487_DISTRIBUCCIONES S.A.SGPRS, 487_DISTRIBUCCIONES S.A.SGPRS, 487_DISTRIBUCCIONES S.A.SGPRS</small><a href="">Ver todas</a></div>
+                        </div>
+                        <hr class="divider">
+                        <div class="subtitle-summary">Selección de la dinámica</div>
+                        <div class="item-summary">
+                          <p>Tipo de dinámica</p><small>Saldo y productos</small>
+                        </div>
+                        <div class="item-summary">
+                          <p>Puntos a ganar</p><small>500</small>
+                        </div>
+                        <div class="item-summary">
+                          <p>Cantidad max. ganadores</p><small>200</small>
+                        </div>
+                        <hr class="divider">
+                        <div class="subtitle-summary">Configuración de la dinámica</div>
+                        <div class="item-summary">
+                          <p>Cantidad mayores a</p><small>$200.000</small>
+                        </div>
+                        <div class="item-summary">
+                          <p>Cantidad mayores a</p><small>$200.000</small>
+                        </div>
+                        <div class="item-summary">
+                          <p>Productos seleccionados</p>
+                          <div class="text-end"><small class="dealers">Queso finesse (78910), Arequipito 100gr (5678), Arequipe 100gr (12345), Arequipe 100gr (12345), Arequipe 100gr (12345), Arequipe 100gr (12345), Arequipe 100gr (12345), Arequipe 100gr (12345)</small><a href="">Ver todas</a></div>
+                        </div>
+                        <div class="button-f justify-content-center"> <a class="button button-primary arrow" href=""> <span>Revisión	</span></a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><a class="button-top" href="#header"></a>
+          <footer class="footer d-none d-md-block">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-md-4 text"><img class="logo img-fluid" src="img/vector/LogoF.svg" alt="">
+                  <p>Compi alimenta tus ganas de crecer </p>
+                  <ul class="redes">
+                    <li><a href="#"><img src="img/vector/facebook.svg" alt=""></a></li>
+                    <li><a href="#"><img src="img/vector/twitter.svg" alt=""></a></li>
+                    <li><a href="#"><img src="img/vector/instagram.svg" alt=""></a></li>
+                    <li><a href="#"><img src="img/vector/whatsapp.svg" alt=""></a></li>
+                    <li><a href=""><img src="img/vector/linkedin.svg" alt=""></a></li>
+                  </ul>
+                  <p class="small"><small>Copyright ©2023 Compi - Todos los derechos reservados   </small><small>Al crear una cuenta Compi aceptas las<a href=""><strong> Políticas de tratamiento de datos</strong></a></small></p>
+                </div>
+                <div class="col-md-5 links"> 
+                  <ul>
+                    <li><a href="">WhatsApp 312 000 0000</a></li>
+                    <li><a href="">Preguntas frecuentes</a></li>
+                    <li><a href="">Términos y condiciones</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-2 button-f"> <a class="button button-primary arrow" href=""> <span>Catálogo</span></a></div>
+              </div>
+            </div>
+          </footer>
+          <footer class="footer d-md-none d-block">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-12 text"><img class="logo img-fluid" src="img/vector/LogoF.svg" alt="">
+                  <p>Compi alimenta tus ganas de crecer</p>
+                  <div class="links"> 
+                    <ul class="w-100 d-flex flex-nowrap">
+                      <li><a href="">WhatsApp</a></li>
+                      <li><a href="">FAQS</a></li>
+                      <li><a href="">Términos</a></li>
+                    </ul>
+                  </div>
+                  <div class="button-f justify-content-start"> <a class="button button-primary arrow" href=""> <span>Catálogo</span></a></div>
+                  <ul class="redes">
+                    <li><a href=""><img src="img/vector/facebook.svg" alt=""></a></li>
+                    <li><a href=""><img src="img/vector/twitter.svg" alt=""></a></li>
+                    <li><a href=""><img src="img/vector/instagram.svg" alt=""></a></li>
+                    <li><a href=""><img src="img/vector/whatsapp.svg" alt=""></a></li>
+                    <li><a href=""><img src="img/vector/linkedin.svg" alt=""></a></li>
+                  </ul>
+                  <p class="small"><small>Copyright ©2023 Compi - Todos los derechos reservados   </small><small>Al crear una cuenta Compi aceptas las<a href=""><strong> Políticas de tratamiento de datos</strong></a></small></p>
+                </div>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </section>
+    <div class="modal fade" id="dinamicasEventos" tabindex="-1" aria-labelledby="popErrorLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <div class="row">
+              <div class="col-12 d-flex flex-column">
+                <div class="modal-info-2">
+                  <div class="modal-info flex-row modal-metas mb-3 mb-md-5 align-items-center">
+                    <div class="reto m-0 me-md-4" id="meta">                </div>
+                    <div class="d-block"> 
+                      <h4 class="title">Dinámicas para los eventos</h4>
+                      <p class="mb-4">Aquí podrás encontrar la descripción de las diferentes dinámicas que podrás usar para tus eventos.</p>
+                      <ol> 
+                        <li>Dinámica compras</li>
+                        <p>Esta dinámica te permite asignar una cantidad específica de pedidos, sin importar el producto o su marca. Esta es la dinámica más general de la plataforma.</p>
+                        <hr>
+                        <li>Dinámica compras mayores a </li>
+                        <p>Con esta dinámica podrás establecer un valor fijo mínimo de compras como meta. Debes dar este valor en pesos y los ganadores serán los primeros en alcanzarlo con sus pedidos.</p>
+                        <hr>
+                        <li>Dinámica  saldo y productos</li>
+                        <p>Con esta dinámica tendrás la posibilidad de establecer un valor mínimo de compras y además, podrás especificar los productos participantes para alcanzarlo.</p>
+                        <hr>
+                        <li>Dinámica categorías o marcas</li>
+                        <p>Con esta dinámica tendrás la posibilidad de establecer un valor mínimo de compras y además, podrás especificar las marcas o categorías participantes para alcanzarlo.</p>
+                        <hr>
+                        <li>Unidades mayores a </li>
+                        <p>En esta dinámica podrás seleccionar productos específicos que quieras impulsar, y poner como meta de cumplimiento una cantidad específica de estos. </p>
+                        <hr>
+                        <div class="col-12 col-md-4">
+                          <button class="button button-line w-100">Regresar </button>
+                        </div>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/vendor/popper.min.js"></script>
+    <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.4/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js">  </script>
+    <script type="text/javascript" src="./js/useCamera.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+    <script type="text/javascript" src="js/calendar.js"></script>
+    <script type="text/javascript" src="js/tab_redemption.js"></script>
+    <script type="text/javascript" src="js/data_range_picker.js"></script>
+  </body>
+</html>

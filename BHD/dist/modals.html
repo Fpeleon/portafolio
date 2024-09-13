@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Banco BHD</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/slick/slick.css">
+    <link rel="stylesheet" href="css/slick/slick-theme.css">
+    <link rel="icon" href="img/favicon.jpg" type="img/png">
+  </head>
+  <body>
+    <section class="menuLog">
+      <div class="container"><img class="img-fluid" src="img/brand/logo.png" alt="Banco BHD">
+        <nav data-links><a href="home.html#home">Home</a><a href="home.html#park">+ Parqueo gratis</a><a href="home.html#travel">+ Aeropuerto</a><a href="home.html#benefits">+ Beneficios</a><a href="home.html#protection">+ Protecciones</a><a href="home.html#services">+ Asistencia</a></nav>
+        <button id="toggleMenu">Menú</button>
+      </div>
+    </section>
+    <nav class="slideMenu" data-links>
+      <button id="closeMenu"></button><a href="home.html#home">Home</a><a href="home.html#park">+ Parqueo gratis</a><a href="home.html#travel">+ Aeropuerto</a><a href="home.html#benefits">+ Beneficios</a><a href="home.html#protection">+ Protecciones</a><a href="home.html#services">+ Asistencia</a>
+    </nav>
+    <section class="bg-dark py-3 py-md-5 vh-100">
+      <div class="container py-5">
+        <div class="row justify-content-center"> 
+          <div class="col-md-8 py-2 py-md-5">
+            <div class="row justify-content-center"> 
+              <div class="col-md-6 col-11 my-2">
+                <button class="w-100 btnOrange justify-content-center" type="button" data-bs-toggle="modal" data-bs-target="#successDownload">¡Descarga exitosa!</button>
+              </div>
+              <div class="col-md-6 col-11 my-2">
+                <button class="w-100 btnOrange justify-content-center" type="button" data-bs-toggle="modal" data-bs-target="#formParkModal">Formulario parqueo</button>
+              </div>
+              <div class="col-md-6 col-11 my-2">
+                <button class="w-100 btnOrange justify-content-center" type="button" data-bs-toggle="modal" data-bs-target="#modalRegister">Registro exitoso</button>
+              </div>
+              <div class="col-md-6 col-11 my-2">
+                <button class="w-100 btnOrange justify-content-center" type="button" data-bs-toggle="modal" data-bs-target="#modalNoAvalible">QR no disponibles</button>
+              </div>
+              <div class="col-md-6 col-11 my-2">
+                <button class="w-100 btnOrange justify-content-center" type="button" data-bs-toggle="modal" data-bs-target="#modalParkingNoAvalible">Parqueaderos</button>
+              </div>
+              <div class="col-md-6 col-11 my-2">
+                <button class="w-100 btnOrange justify-content-center" type="button" data-bs-toggle="modal" data-bs-target="#noCode">¡Lo sentimos, no hay códigos disponibles!</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="noCode" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content p-1 p-md-3">
+              <div class="text-right">
+                <button class="closeModal" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="text-center">
+                  <h4 class="mb-4 bolder">¡Lo sentimos, no hay códigos disponibles!</h4>
+                  <p>En el momento presentamos una alta demanda de códigos en el parqueo del Aeropuerto Internacional de las Américas.</p>
+                  <p>Esperamos habilitar nuevos códigos a partir del 3 de enero de 2024.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="successDownload" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content p-1 p-md-3">
+              <div class="text-right">
+                <button class="closeModal" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="text-center"><img src="./img/brand/success.svg" alt="OK">
+                  <h4 class="text-green mb-3 bolder">¡Tu descarga ha<br>sido exitosa!</h4>
+                  <p>Presenta este código QR en el aeropuerto para retirar tu vehículo de forma gratuita.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="formParkModal" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content p-1 p-md-3">
+              <div class="text-right">
+                <button class="closeModal" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="text-center"><img src="./img/brand/success.svg" alt="OK">
+                  <h4 class="text-green mb-3 bolder">¡Tus datos<br>fueron enviados<br>de forma exitosa!</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="modalRegister" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content p-1 p-md-3">
+              <div class="text-right">
+                <button class="closeModal" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="text-center"><img src="./img/brand/success.svg" alt="OK">
+                  <h4 class="text-green mb-3 bolder">¡Te registraste de <br>manera exitosa!</h4>
+                  <p>Ahora tus compras en el exterior triplicarán tus Estrellas BHD.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="modalNoAvalible" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content p-1 p-md-3">
+              <div class="text-right">
+                <button class="closeModal" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="text-center"><img src="./img/brand/no_avalible.svg" alt="OK">
+                  <h4 class="text-red mb-3 bolder">No tienes más QR <br>disponibles</h4>
+                  <p>Ya redimiste el límite de códigos permitidos.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade black-modal" id="modalParkingNoAvalible" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content p-1 p-md-3">
+              <div class="modal-body">
+                <div class="p-relative"><img class="p-absolute" src="./img/brand/alert.png" alt="">
+                  <div>
+                    <div class="mb-3">
+                      <p> <img class="img-icon" src="./img/brand/alert.png" alt=""><span>Si tienes intención de viajar en este fin de año y utilizar los parqueaderos del AILA, </span><strong>favor considerar que los parqueos están ocupados en su total capacidad.</strong></p>
+                    </div>
+                    <p>Lamentamos los inconvenientes.</p><a class="btn-gray" href="home.html">Volver al inicio</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footerApp"> 
+      <div class="container"> <img class="img-fluid" src="img/brand/footer_logo.svg" alt=""></div>
+    </footer>
+    <script type="text/javascript" src="js/vendor/jquery.min.js"></script>
+    <script type="text/javascript" src="js/vendor/slick.min.js"></script>
+    <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/vendor/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="js/vendor/gsap.js"></script>
+    <script type="text/javascript" src="js/vendor/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/effects.js"></script>
+  </body>
+</html>
